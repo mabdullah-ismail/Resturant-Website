@@ -111,7 +111,7 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-6xl flex-grow">
           {/* CENTERED HEADING */}
-          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-20 md:mb-24 tracking-tighter text-center">
+          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-32 md:mb-24 tracking-tighter text-center">
             THE LEGEND<br/>
             <span className="text-brand-charcoal underline underline-offset-4 md:underline-offset-8 decoration-white decoration-2 md:decoration-4">IS HERE.</span>
           </h2>
