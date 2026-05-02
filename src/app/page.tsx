@@ -35,7 +35,7 @@ export default function Home() {
       <SmoothScroll />
       
       {/* 1. ANIMATION SECTION (PINNED) */}
-      <section className="sequence-container relative w-full overflow-hidden bg-brand-charcoal">
+      <section className="sequence-container relative w-full overflow-hidden bg-brand-charcoal z-10">
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
@@ -81,7 +81,7 @@ export default function Home() {
       </section>
 
       {/* 2. NOT GUILTY SECTION */}
-      <section id="not-guilty-section" className="relative z-30 bg-brand-orange min-h-[100dvh] flex items-center justify-center py-24 md:py-40 px-6 md:px-12 overflow-hidden border-t-8 border-brand-charcoal">
+      <section id="not-guilty-section" className="relative z-20 bg-brand-orange min-h-[100dvh] flex items-center justify-center py-24 md:py-40 px-6 md:px-12 overflow-hidden border-t-8 border-brand-charcoal">
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, black 0px, black 2px, transparent 2px, transparent 60px)' }} />
         
         <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center relative z-10">
@@ -108,7 +108,9 @@ export default function Home() {
       </section>
 
       {/* 3. MENU RECEIPT SECTION (Replaced Beef Charcoal) */}
-      <MenuReceipt />
+      <div className="relative z-30">
+        <MenuReceipt />
+      </div>
 
       {/* 4. FINAL CTA / LAST PAGE - CENTERED TEXT */}
       <section className="relative z-30 bg-brand-red min-h-[100dvh] flex flex-col items-center justify-center py-12 md:py-24 px-6 md:px-12 overflow-hidden">
