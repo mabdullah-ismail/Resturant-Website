@@ -199,7 +199,7 @@ export default function ChaecholScrollSequence() {
   }, [images]);
 
   return (
-    <div ref={sectionRef} className="relative w-full overflow-hidden bg-brand-charcoal">
+    <div ref={sectionRef} className="relative w-full bg-brand-charcoal">
       <AnimatePresence>
         {isLoading && (
           <motion.div 
@@ -235,7 +235,7 @@ export default function ChaecholScrollSequence() {
         )}
       </AnimatePresence>
       
-      <div className="h-[100dvh] w-full flex items-center justify-center overflow-hidden">
+      <div className="h-[100dvh] w-full flex items-center justify-center">
         <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]" />
         <canvas ref={canvasRef} className="w-full h-full pointer-events-none" style={{ width: '100vw', height: '100dvh', display: 'block' }} />
       </div>
