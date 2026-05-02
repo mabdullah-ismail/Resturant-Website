@@ -7,6 +7,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function SmoothScroll() {
   useEffect(() => {
+    // Only enable Lenis on desktop. Mobile has native hardware momentum scrolling!
+    // Running Lenis on mobile causes severe touch event conflicts (can't scroll up).
+    const isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!isDesktop) return;
+
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
