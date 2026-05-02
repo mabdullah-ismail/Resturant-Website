@@ -32,10 +32,18 @@ export default function Home() {
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 text-center w-full">
+           <div className="intro-text-1 text-center w-full flex flex-col items-center justify-center">
               <h2 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                 THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
+              
+              {/* Scroll Indicator */}
+              <div className="scroll-indicator mt-12 md:mt-24 flex flex-col items-center animate-bounce">
+                <span className="text-white text-sm md:text-xl font-bold uppercase tracking-[0.3em] mb-2 drop-shadow-lg">Scroll To Bite</span>
+                <svg className="w-6 h-6 md:w-10 md:h-10 text-brand-orange drop-shadow-lg" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
            </div>
 
            <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">

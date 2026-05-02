@@ -121,18 +121,21 @@ export default function ChaecholScrollSequence() {
 
     const isMobile = window.innerWidth <= 768;
 
-    // 1. "The Moment of Truth" (Appears 0-15%, Moves 15-30%)
-    tl.fromTo('.intro-text-1', 
-      { opacity: 0, scale: 0.8 },
-      { opacity: 1, scale: 1, duration: 15 },
-      0
-    ).to('.intro-text-1', {
+    // Fast fade out for the scroll indicator as soon as user scrolls (0-5%)
+    tl.to('.scroll-indicator', {
+      opacity: 0,
+      y: -20,
+      duration: 5
+    }, 0);
+
+    // 1. "The Moment of Truth" (Moves 5-25%)
+    tl.to('.intro-text-1', {
       scale: isMobile ? 0.5 : 0.4,
       x: isMobile ? '20vw' : '35vw',
       y: isMobile ? '-35vh' : '-40vh',
       opacity: 0.9,
-      duration: 15
-    }, 15);
+      duration: 20
+    }, 5);
 
     // 2. "Built For The Bold" (Appears 35-50%, Moves 50-65%)
     tl.fromTo('.intro-text-2', 
