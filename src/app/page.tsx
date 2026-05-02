@@ -17,6 +17,10 @@ export default function Home() {
       history.scrollRestoration = 'manual';
     }
     window.scrollTo(0, 0);
+
+    // FIX FOR ANDROID SCROLL LOCK:
+    // Prevents GSAP from completely breaking when the Android URL bar hides/shows
+    ScrollTrigger.config({ ignoreMobileResize: true });
   }, []);
 
   return (
