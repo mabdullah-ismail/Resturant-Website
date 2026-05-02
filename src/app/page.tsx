@@ -1,65 +1,132 @@
-import Image from "next/image";
+'use client';
+
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ChaecholScrollSequence from '@/components/ChaecholScrollSequence';
+import SmoothScroll from '@/components/SmoothScroll';
+import MenuReceipt from '@/components/MenuReceipt';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
+  const mainRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main ref={mainRef} className="relative bg-brand-charcoal selection:bg-brand-orange selection:text-white overflow-x-hidden">
+      <SmoothScroll />
+      
+      {/* 1. ANIMATION SECTION (PINNED) */}
+      <section className="sequence-container relative w-full overflow-hidden bg-brand-charcoal">
+        <ChaecholScrollSequence />
+
+        <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
+           <div className="intro-text-1 text-center">
+              <h2 className="text-4xl md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
+                THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
+              </h2>
+           </div>
+
+           <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
+              <div className="intro-text-2 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.5)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,0.5)]">
+                <h2 className="text-3xl md:text-8xl font-black text-white uppercase italic text-center">
+                  BUILT FOR<br className="md:hidden"/> THE BOLD.
+                </h2>
+              </div>
+           </div>
+
+           <div className="final-reveal-text absolute bottom-24 md:bottom-20 right-0 left-0 md:right-12 md:left-auto flex flex-col items-center md:items-end text-center md:text-right px-6">
+              <h1 className="text-5xl md:text-[8rem] font-black tracking-tighter text-white leading-none drop-shadow-[0_0_15px_rgba(0,0,0,1)] md:drop-shadow-[0_0_30px_rgba(0,0,0,1)]">
+                UNWRAPPED
+              </h1>
+              <div className="bg-brand-orange px-4 md:px-6 py-1 mt-2 -rotate-1 shadow-lg">
+                <h2 className="text-2xl md:text-5xl font-black text-white tracking-tighter">
+                  PERFECTION
+                </h2>
+              </div>
+           </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Brand Elements */}
+        <div className="fixed top-6 left-0 right-0 md:left-12 md:right-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 z-50">
+          <div className="bg-brand-red p-1.5 md:p-2 font-black text-xl md:text-2xl rotate-3 shadow-lg">B.B</div>
+          <span className="text-base md:text-xl font-black tracking-tighter text-white">BELLY BRO'S</span>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* 2. NOT GUILTY SECTION */}
+      <section id="not-guilty-section" className="relative z-30 bg-brand-orange min-h-[100dvh] flex items-center justify-center py-24 md:py-40 px-6 md:px-12 overflow-hidden border-t-8 border-brand-charcoal">
+        <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, black 0px, black 2px, transparent 2px, transparent 60px)' }} />
+        
+        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center relative z-10">
+          <div className="flex flex-col items-center">
+            <div className="relative w-full max-w-[320px] md:max-w-[500px]">
+              <div className="w-full aspect-[4/5] bg-brand-charcoal border-[8px] md:border-[16px] border-white shadow-[15px_15px_0px_0px_rgba(0,0,0,0.3)] md:shadow-[30px_30px_0px_0px_rgba(0,0,0,0.3)] overflow-hidden">
+                 <img src="/guilty.png" className="w-full h-full object-cover" alt="Not Guilty Hero" />
+              </div>
+              <div className="absolute -left-8 md:-left-12 top-0 h-full flex flex-col justify-between py-6 md:py-8 text-sm md:text-lg font-black text-white">
+                <span>7'0"</span><span>6'0"</span><span>5'0"</span><span>4'0"</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col items-center md:items-start gap-8 md:gap-12 text-center md:text-left">
+            <div className="bg-brand-charcoal text-white px-6 md:px-8 py-2 md:py-3 text-2xl md:text-4xl font-black rotate-[-2deg] shadow-xl">VERDICT:</div>
+            <h2 className="text-6xl md:text-[12rem] font-black tracking-tighter text-white leading-[0.85] md:leading-[0.8]">
+              NOT<br/>GUILTY
+            </h2>
+            <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-l-0 md:border-l-8 border-brand-red pl-0 md:pl-8 italic">
+              "Flavor so intense, it should be a felony."
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. MENU RECEIPT SECTION (Replaced Beef Charcoal) */}
+      <MenuReceipt />
+
+      {/* 4. FINAL CTA / LAST PAGE - CENTERED TEXT */}
+      <section className="relative z-30 bg-brand-red min-h-[100dvh] flex flex-col items-center justify-center py-12 md:py-24 px-6 md:px-12 overflow-hidden">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-10">
+           <span className="text-[120vw] md:text-[60vw] font-black text-white whitespace-nowrap">B.B</span>
+        </div>
+
+        <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-6xl flex-grow">
+          {/* CENTERED HEADING */}
+          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-12 md:mb-24 tracking-tighter text-center">
+            THE LEGEND<br/>
+            <span className="text-brand-charcoal underline underline-offset-4 md:underline-offset-8 decoration-white decoration-2 md:decoration-4">IS HERE.</span>
+          </h2>
+          
+          <div className="flex flex-col md:flex-row gap-5 md:gap-12 w-[85%] max-w-sm md:max-w-none md:w-full justify-center items-center mx-auto">
+             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-orange px-6 md:px-12 py-4 md:py-10 text-xl md:text-3xl font-black text-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+                FIND US
+             </button>
+             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-charcoal px-6 md:px-12 py-4 md:py-10 text-xl md:text-3xl font-black text-white shadow-[8px_8px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+                ORDER NOW
+             </button>
+          </div>
+        </div>
+
+        {/* SOCIAL LINKS - CENTERED */}
+        <div className="relative z-10 w-full pt-8 md:pt-12 border-t border-white/20 mt-12 md:mt-16">
+          <div className="flex flex-wrap justify-center gap-6 md:gap-24 text-[10px] md:text-sm font-black text-white uppercase tracking-[0.2em] md:tracking-[0.4em]">
+             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Instagram</a>
+             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">TikTok</a>
+             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Facebook</a>
+          </div>
+        </div>
+      </section>
+
+      <footer className="relative z-30 bg-brand-charcoal py-6 md:py-8 text-center">
+          <p className="text-[8px] md:text-[10px] font-black text-white/20 tracking-widest uppercase px-4">© 2024 BELLY BRO'S • NO DIET, JUST BITE</p>
+      </footer>
+    </main>
   );
 }
