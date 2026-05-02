@@ -124,10 +124,9 @@ export default function ChaecholScrollSequence() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=350%", 
+        end: "+=300%", // Slightly shorter pin to ensure it releases faster
         pin: true,
-        scrub: 0.5, // Faster scrub for better responsiveness
-        anticipatePin: 1,
+        scrub: 0.8,
       }
     });
 
