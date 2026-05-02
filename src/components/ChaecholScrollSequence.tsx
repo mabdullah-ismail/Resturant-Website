@@ -141,7 +141,7 @@ export default function ChaecholScrollSequence() {
       35
     ).to('.intro-text-2', {
       rotation: -90,
-      x: isMobile ? '-30vw' : '-42vw',
+      x: isMobile ? '-42vw' : '-42vw',
       scale: isMobile ? 0.7 : 0.6,
       duration: 15
     }, 50);
