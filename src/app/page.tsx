@@ -32,8 +32,8 @@ export default function Home() {
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 text-center w-full flex flex-col items-center justify-center">
-              <h2 className="text-[14vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9] whitespace-nowrap">
+           <div className="intro-text-1 text-center w-full flex flex-col items-center justify-center px-4">
+              <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                 THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
            </div>
@@ -111,7 +111,7 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-6xl flex-grow">
           {/* CENTERED HEADING */}
-          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-32 md:mb-24 tracking-tighter text-center">
+          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-40 md:mb-24 tracking-tighter text-center">
             THE LEGEND<br/>
             <span className="text-brand-charcoal underline underline-offset-4 md:underline-offset-8 decoration-white decoration-2 md:decoration-4">IS HERE.</span>
           </h2>
