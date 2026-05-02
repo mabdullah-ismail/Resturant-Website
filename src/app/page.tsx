@@ -32,14 +32,14 @@ export default function Home() {
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 text-center w-full flex flex-col items-center justify-center px-4">
+           <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4" style={{ opacity: 0 }}>
               <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                 THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
            </div>
 
            {/* Scroll Indicator - Positioned at absolute bottom */}
-           <div className="scroll-indicator absolute bottom-8 left-0 right-0 flex flex-col items-center animate-bounce pointer-events-none z-50">
+           <div className="scroll-indicator opacity-0 absolute bottom-8 left-0 right-0 flex flex-col items-center animate-bounce pointer-events-none z-50" style={{ opacity: 0 }}>
              <span className="text-white text-sm md:text-xl font-bold uppercase tracking-[0.3em] mb-2 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">Scroll To Bite</span>
              <svg className="w-8 h-8 md:w-10 md:h-10 text-brand-orange drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
@@ -47,14 +47,14 @@ export default function Home() {
            </div>
 
            <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
-              <div className="intro-text-2 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.5)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,0.5)]">
+              <div className="intro-text-2 opacity-0 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.5)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,0.5)]" style={{ opacity: 0 }}>
                 <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
                   BUILT FOR THE BOLD.
                 </h2>
               </div>
            </div>
 
-           <div className="final-reveal-text absolute bottom-24 md:bottom-20 right-0 left-0 md:right-12 md:left-auto flex flex-col items-center md:items-end text-center md:text-right px-6">
+           <div className="final-reveal-text opacity-0 absolute bottom-24 md:bottom-20 right-0 left-0 md:right-12 md:left-auto flex flex-col items-center md:items-end text-center md:text-right px-6" style={{ opacity: 0 }}>
               <h1 className="text-5xl md:text-[8rem] font-black tracking-tighter text-white leading-none drop-shadow-[0_0_15px_rgba(0,0,0,1)] md:drop-shadow-[0_0_30px_rgba(0,0,0,1)]">
                 UNWRAPPED
               </h1>

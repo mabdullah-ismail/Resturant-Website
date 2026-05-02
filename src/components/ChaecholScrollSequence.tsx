@@ -53,6 +53,27 @@ export default function ChaecholScrollSequence() {
     }
   }, []);
 
+  // Handle the delayed entrance of text after loading
+  useEffect(() => {
+    if (!isLoading) {
+      // Small delay to let the loading screen fade out first
+      gsap.to('.intro-text-1', {
+        opacity: 1,
+        y: 0,
+        duration: 1.2,
+        delay: 0.8,
+        ease: "power3.out"
+      });
+
+      gsap.to('.scroll-indicator', {
+        opacity: 1,
+        duration: 1,
+        delay: 1.5,
+        ease: "power2.out"
+      });
+    }
+  }, [isLoading]);
+
   // GSAP ScrollTrigger for Pinning and Animation
   useEffect(() => {
     if (images.length === 0 || !canvasRef.current || !sectionRef.current) return;
