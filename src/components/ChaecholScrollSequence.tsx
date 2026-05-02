@@ -119,15 +119,17 @@ export default function ChaecholScrollSequence() {
       onUpdate: () => render(animationObj.frame)
     }, 0);
 
+    const isMobile = window.innerWidth <= 768;
+
     // 1. "The Moment of Truth" (Appears 0-15%, Moves 15-30%)
     tl.fromTo('.intro-text-1', 
       { opacity: 0, scale: 0.8 },
       { opacity: 1, scale: 1, duration: 15 },
       0
     ).to('.intro-text-1', {
-      scale: 0.4,
-      x: '35vw',
-      y: '-40vh',
+      scale: isMobile ? 0.5 : 0.4,
+      x: isMobile ? '20vw' : '35vw',
+      y: isMobile ? '-35vh' : '-40vh',
       opacity: 0.9,
       duration: 15
     }, 15);
@@ -139,8 +141,8 @@ export default function ChaecholScrollSequence() {
       35
     ).to('.intro-text-2', {
       rotation: -90,
-      x: '-42vw',
-      scale: 0.6,
+      x: isMobile ? '-30vw' : '-42vw',
+      scale: isMobile ? 0.7 : 0.6,
       duration: 15
     }, 50);
 
