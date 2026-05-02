@@ -28,16 +28,16 @@ export default function Home() {
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 text-center">
-              <h2 className="text-4xl md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
+           <div className="intro-text-1 text-center w-full">
+              <h2 className="text-6xl md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                 THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
            </div>
 
            <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
               <div className="intro-text-2 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.5)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,0.5)]">
-                <h2 className="text-3xl md:text-8xl font-black text-white uppercase italic text-center">
-                  BUILT FOR<br className="md:hidden"/> THE BOLD.
+                <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
+                  BUILT FOR THE BOLD.
                 </h2>
               </div>
            </div>
@@ -99,16 +99,16 @@ export default function Home() {
 
         <div className="relative z-10 flex flex-col items-center justify-center text-center w-full max-w-6xl flex-grow">
           {/* CENTERED HEADING */}
-          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-12 md:mb-24 tracking-tighter text-center">
+          <h2 className="text-5xl md:text-[11rem] font-black text-white leading-none mb-20 md:mb-24 tracking-tighter text-center">
             THE LEGEND<br/>
             <span className="text-brand-charcoal underline underline-offset-4 md:underline-offset-8 decoration-white decoration-2 md:decoration-4">IS HERE.</span>
           </h2>
           
-          <div className="flex flex-col md:flex-row gap-5 md:gap-12 w-[85%] max-w-sm md:max-w-none md:w-full justify-center items-center mx-auto">
-             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-orange px-6 md:px-12 py-4 md:py-10 text-xl md:text-3xl font-black text-white shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-12 w-[85%] max-w-sm md:max-w-none md:w-full justify-center items-center mx-auto">
+             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
                 FIND US
              </button>
-             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-charcoal px-6 md:px-12 py-4 md:py-10 text-xl md:text-3xl font-black text-white shadow-[8px_8px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-charcoal px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
                 ORDER NOW
              </button>
           </div>

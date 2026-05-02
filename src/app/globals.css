@@ -26,6 +26,14 @@ html, body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Prevent Android double-tap zoom and pull-to-refresh */
+  overscroll-behavior-y: none;
+  touch-action: pan-y pinch-zoom;
+}
+
+/* Prevent zoom on double tap on UI elements */
+button, a {
+  touch-action: manipulation;
 }
 
 /* Texture Overlay - Grainy and Gritty */
