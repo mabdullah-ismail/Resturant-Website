@@ -126,7 +126,7 @@ export default function ChaecholScrollSequence() {
         start: "top top",
         end: "+=350%", 
         pin: true,
-        scrub: 1, // Smoother scrub for touch
+        scrub: 0.5, // Faster scrub for better responsiveness
         anticipatePin: 1,
       }
     });

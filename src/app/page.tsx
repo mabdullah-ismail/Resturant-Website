@@ -21,6 +21,16 @@ export default function Home() {
     // FIX FOR ANDROID SCROLL LOCK:
     // Prevents GSAP from completely breaking when the Android URL bar hides/shows
     ScrollTrigger.config({ ignoreMobileResize: true });
+    
+    // Smooth out scroll behavior to prevent 'stuck' feelings on some browsers
+    ScrollTrigger.normalizeScroll(true);
+
+    // Refresh ScrollTrigger after a short delay to ensure all layouts are calculated correctly
+    const timer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -55,7 +65,7 @@ export default function Home() {
            </div>
 
            <div className="final-reveal-text opacity-0 absolute bottom-24 md:bottom-20 right-0 left-0 md:right-12 md:left-auto flex flex-col items-center md:items-end text-center md:text-right px-6" style={{ opacity: 0 }}>
-              <h1 className="text-5xl md:text-[8rem] font-black tracking-tighter text-white leading-none drop-shadow-[0_0_15px_rgba(0,0,0,1)] md:drop-shadow-[0_0_30px_rgba(0,0,0,1)]">
+              <h1 className="text-5xl md:text-[8rem] font-black tracking-tighter text-white leading-none drop-shadow-[0_0_15px_rgba(0,0,0,1)] md:drop-shadow-[0_0_30px_rgba(0,0,0,1)]" style={{ WebkitTextStroke: "2px var(--color-brand-orange)" }}>
                 UNWRAPPED
               </h1>
               <div className="bg-brand-orange px-4 md:px-6 py-1 mt-2 -rotate-1 shadow-lg">
