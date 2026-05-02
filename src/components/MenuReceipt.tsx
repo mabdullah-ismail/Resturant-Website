@@ -3,7 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
-const menuData = [
+type MenuItem = { name: string; price: string; desc?: string };
+type MenuCategory = { category: string; items: MenuItem[] };
+
+const menuData: MenuCategory[] = [
   { category: "STARTERS", items: [
     { name: "Chicken Tenders 3 Pcs", price: "Rs. 649" },
     { name: "Chicken Tenders 6 Pcs", price: "Rs. 1149" },
