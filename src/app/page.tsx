@@ -22,9 +22,6 @@ export default function Home() {
     // Prevents GSAP from completely breaking when the Android URL bar hides/shows
     ScrollTrigger.config({ ignoreMobileResize: true });
     
-    // Smooth out scroll behavior to prevent 'stuck' feelings on some browsers
-    ScrollTrigger.normalizeScroll(true);
-
     // Refresh ScrollTrigger after a short delay to ensure all layouts are calculated correctly
     const timer = setTimeout(() => {
       ScrollTrigger.refresh();

@@ -15,14 +15,16 @@ export default function SmoothScroll() {
     gsap.registerPlugin(ScrollTrigger);
 
     const lenis = new Lenis({
+      autoRaf: false, // We use GSAP ticker for RAF
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
       wheelMultiplier: 1,
-      touchMultiplier: 1.5,
+      touchMultiplier: 2,
       infinite: false,
+      syncTouch: true, // Crucial for syncing touch/scrollbar with Lenis
     });
 
     lenis.scrollTo(0, { immediate: true });
