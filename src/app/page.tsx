@@ -124,12 +124,22 @@ export default function Home() {
           </h2>
           
           <div className="flex flex-col md:flex-row gap-4 md:gap-12 w-[85%] max-w-sm md:max-w-none md:w-full justify-center items-center mx-auto">
-             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+             <a 
+               href="https://www.google.com/maps/place/belly+bros/data=!4m2!3m1!1s0x3919036cc83bebed:0xcd8774190ddb6f18?sa=X&ved=1t:242&ictx=111"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block"
+             >
                 FIND US
-             </button>
-             <button className="w-full md:flex-1 min-w-0 md:min-w-[300px] rounded-none bg-brand-charcoal px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest">
+             </a>
+             <a 
+               href="https://www.foodpanda.pk/restaurant/jqef/bellybros?utm_campaign=google_reserve_place_order_action_CH-SEO_"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-charcoal px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block"
+             >
                 ORDER NOW
-             </button>
+             </a>
           </div>
         </div>
 
