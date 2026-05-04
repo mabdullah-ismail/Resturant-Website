@@ -96,10 +96,10 @@ export default function MenuReceipt() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[200dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
+    <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[400dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
       
       {/* MASSIVE Sticky Dispenser Slot - Stays at top! */}
-      <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black to-zinc-900 z-50 border-b-[12px] border-[#111] flex items-center justify-center shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
+      <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black to-zinc-900 z-[100] border-b-[12px] border-[#111] flex items-center justify-center shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
         <div className="w-[95%] md:w-[90%] max-w-7xl h-4 md:h-8 bg-black rounded-full shadow-inner flex items-center justify-center overflow-hidden border border-white/10">
            {/* Flashing print laser */}
            <motion.div 
@@ -109,10 +109,10 @@ export default function MenuReceipt() {
            />
         </div>
         {/* Metal rivets */}
-        <div className="absolute top-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600" />
-        <div className="absolute top-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600" />
-        <div className="absolute bottom-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600" />
-        <div className="absolute bottom-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600" />
+        <div className="absolute top-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
+        <div className="absolute top-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
+        <div className="absolute bottom-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
+        <div className="absolute bottom-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
       </div>
 
       {/* The 3D Receipt Paper */}
@@ -129,7 +129,7 @@ export default function MenuReceipt() {
           <div className="absolute -top-6 left-0 right-0 h-6 bg-[#F5F5F0]" style={{ clipPath: 'polygon(0% 100%, 2% 0%, 4% 100%, 6% 0%, 8% 100%, 10% 0%, 12% 100%, 14% 0%, 16% 100%, 18% 0%, 20% 100%, 22% 0%, 24% 100%, 26% 0%, 28% 100%, 30% 0%, 32% 100%, 34% 0%, 36% 100%, 38% 0%, 40% 100%, 42% 0%, 44% 100%, 46% 0%, 48% 100%, 50% 0%, 52% 100%, 54% 0%, 56% 100%, 58% 0%, 60% 100%, 62% 0%, 64% 100%, 66% 0%, 68% 100%, 70% 0%, 72% 100%, 74% 0%, 76% 100%, 78% 0%, 80% 100%, 82% 0%, 84% 100%, 86% 0%, 88% 100%, 90% 0%, 92% 100%, 94% 0%, 96% 100%, 98% 0%, 100% 100%)' }} />
 
           {/* Receipt Header */}
-          <div className="pt-16 md:pt-24 pb-8 md:pb-12 text-center border-b-[4px] border-dashed border-gray-400 px-4 md:px-12 pointer-events-none">
+          <div className="pt-32 md:pt-64 pb-8 md:pb-12 text-center border-b-[4px] border-dashed border-gray-400 px-4 md:px-12 pointer-events-none">
              <h2 className="text-5xl md:text-9xl font-black uppercase tracking-tighter text-black/90 leading-none" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                 BELLY BRO'S
              </h2>

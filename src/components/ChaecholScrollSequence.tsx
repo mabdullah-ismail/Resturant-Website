@@ -124,9 +124,9 @@ export default function ChaecholScrollSequence() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=300%", // Slightly shorter pin to ensure it releases faster
+        end: "+=800%", // Much longer scroll distance for more "frames per scroll"
         pin: true,
-        scrub: 0.8,
+        scrub: 1.2, // Increased for even smoother "braking" feel in the sequence
       }
     });
 
