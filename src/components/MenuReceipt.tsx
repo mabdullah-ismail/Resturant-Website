@@ -96,7 +96,7 @@ export default function MenuReceipt() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[400dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
+    <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[300dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
       
       {/* MASSIVE Sticky Dispenser Slot - Stays at top! */}
       <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black to-zinc-900 z-[100] border-b-[12px] border-[#111] flex items-center justify-center shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">

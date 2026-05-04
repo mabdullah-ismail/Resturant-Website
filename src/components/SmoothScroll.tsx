@@ -20,12 +20,9 @@ export default function SmoothScroll() {
       wheelMultiplier: 1.1, // Slightly more responsive
       touchMultiplier: 1.5, // Natural touch feel
       infinite: false,
-      syncTouch: true,
+      syncTouch: false, // Prevents touch event capturing that can break pinning
     });
  
-    // Reset to top on refresh
-    lenis.scrollTo(0, { immediate: true });
-
     // Sync Lenis with GSAP ScrollTrigger
     lenis.on('scroll', ScrollTrigger.update);
 
