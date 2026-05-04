@@ -32,7 +32,7 @@ export default function Home() {
 
   return (
     <main ref={mainRef} className="relative bg-brand-charcoal selection:bg-brand-orange selection:text-white overflow-x-hidden">
-      {/* <SmoothScroll /> */}
+      <SmoothScroll />
       
       {/* 1. ANIMATION SECTION (PINNED) */}
       <section className="sequence-container relative w-full bg-brand-charcoal">
