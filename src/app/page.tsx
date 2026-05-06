@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
 
+  // Production Reset Logic: Force scroll to top on every mount/refresh
   useEffect(() => {
     // 1. Force manual scroll restoration so the browser doesn't try to "help"
     if ('scrollRestoration' in history) {
