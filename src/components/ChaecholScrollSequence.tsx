@@ -153,7 +153,7 @@ export default function ChaecholScrollSequence() {
     tl.to('.intro-text-1', {
       scale: isMobile ? 0.6 : 0.4,
       x: isMobile ? '10vw' : '35vw',
-      y: isMobile ? '-25dvh' : '-40vh',
+      y: isMobile ? '-10dvh' : '-15dvh', // Subtle movement since it starts high
       opacity: 0.9,
       duration: 20
     }, 5);

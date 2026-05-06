@@ -41,13 +41,12 @@ export default function Home() {
       <section className="sequence-container relative w-full bg-brand-charcoal">
         <ChaecholScrollSequence />
 
-        <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative" style={{ opacity: 0 }}>
-
-              <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
-                {siteConfig.hero.title}<br/>OF <span className="text-brand-red underline decoration-brand-orange">{siteConfig.hero.titleAccent}</span>
-              </h2>
-           </div>
+         <div className="pointer-events-none fixed inset-0 z-20 flex items-start justify-center p-6 md:p-12">
+            <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative mt-[15dvh] md:mt-[10dvh]" style={{ opacity: 0 }}>
+               <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
+                 {siteConfig.hero.title}<br/>OF <span className="text-brand-red underline decoration-brand-orange">{siteConfig.hero.titleAccent}</span>
+               </h2>
+            </div>
 
            {/* Scroll Indicator - Positioned at absolute bottom */}
            <div className="scroll-indicator opacity-0 absolute bottom-8 left-0 right-0 flex flex-col items-center animate-bounce pointer-events-none z-50" style={{ opacity: 0 }}>
@@ -59,10 +58,7 @@ export default function Home() {
 
            <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
               <div className="intro-text-2 opacity-0 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 border-4 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] relative" style={{ opacity: 0 }}>
-                {/* Crosshairs */}
-                <div className="absolute -top-3 -left-3 w-6 h-6 border-t-4 border-l-4 border-white"></div>
-                <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-4 border-r-4 border-white"></div>
-                <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
+                 <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
                   {siteConfig.hero.boldText}
                 </h2>
               </div>
