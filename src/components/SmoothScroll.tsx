@@ -12,15 +12,16 @@ export default function SmoothScroll() {
  
     const lenis = new Lenis({
       autoRaf: false, 
-      duration: 1.5, // Slightly longer duration for a smoother "braking" stop
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth exponential easing
+      duration: 1.2, // Slightly faster for mobile responsiveness
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
       orientation: 'vertical',
       gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 1.1, // Slightly more responsive
-      touchMultiplier: 1.5, // Natural touch feel
+      wheelMultiplier: 1, 
+      touchMultiplier: 2, // More responsive touch
       infinite: false,
-      syncTouch: false, // Prevents touch event capturing that can break pinning
+      syncTouch: true, // Sync with touch for better mobile feel
+      touchInertiaMultiplier: 35,
     });
  
     // Sync Lenis with GSAP ScrollTrigger

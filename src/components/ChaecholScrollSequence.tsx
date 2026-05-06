@@ -87,7 +87,7 @@ export default function ChaecholScrollSequence() {
       // Limit devicePixelRatio to 2 for performance on ultra-high res Android screens
       const dpr = Math.min(window.devicePixelRatio, 2);
       canvas.width = window.innerWidth * dpr;
-      canvas.height = window.innerHeight * dpr;
+      canvas.height = window.innerHeight * dpr; // Use window.innerHeight to avoid dvh issues in JS
     };
     setCanvasSize();
 
@@ -125,9 +125,9 @@ export default function ChaecholScrollSequence() {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: "top top",
-        end: "+=500%", // Balanced scroll distance
+        end: isMobile ? "+=300%" : "+=450%", // Faster scroll for mobile
         pin: true,
-        scrub: 0.8, // Slightly more responsive
+        scrub: isMobile ? 0.5 : 0.8, // Snappier scrub on mobile
       }
     });
 
@@ -151,9 +151,9 @@ export default function ChaecholScrollSequence() {
 
     // 1. "The Moment of Truth" (Moves 5-25%)
     tl.to('.intro-text-1', {
-      scale: isMobile ? 0.5 : 0.4,
-      x: isMobile ? '20vw' : '35vw',
-      y: isMobile ? '-35vh' : '-40vh',
+      scale: isMobile ? 0.6 : 0.4,
+      x: isMobile ? '10vw' : '35vw',
+      y: isMobile ? '-25dvh' : '-40vh',
       opacity: 0.9,
       duration: 20
     }, 5);
@@ -164,9 +164,10 @@ export default function ChaecholScrollSequence() {
       { opacity: 1, y: 0, rotation: 2, duration: 15 },
       35
     ).to('.intro-text-2', {
-      rotation: -90,
-      x: isMobile ? '-42vw' : '-42vw',
-      scale: isMobile ? 0.7 : 0.6,
+      rotation: isMobile ? 0 : -90, // Keep horizontal on mobile to save space
+      x: isMobile ? '0' : '-42vw',
+      y: isMobile ? '30dvh' : '0',
+      scale: isMobile ? 0.8 : 0.6,
       duration: 15
     }, 50);
 
