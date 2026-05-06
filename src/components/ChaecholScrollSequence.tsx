@@ -120,6 +120,7 @@ export default function ChaecholScrollSequence() {
     };
 
     const animationObj = { frame: 0 };
+    const isMobile = window.innerWidth <= 768;
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -139,8 +140,6 @@ export default function ChaecholScrollSequence() {
       duration: 100,
       onUpdate: () => render(animationObj.frame)
     }, 0);
-
-    const isMobile = window.innerWidth <= 768;
 
     // Fast fade out for the scroll indicator as soon as user scrolls (0-5%)
     tl.to('.scroll-indicator', {
