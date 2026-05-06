@@ -239,7 +239,7 @@ export default function ChaecholScrollSequence() {
         <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
         {/* CRT Scanline Overlay */}
         <div className="absolute inset-0 z-20 pointer-events-none opacity-[0.15]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, black 2px, black 4px)' }} />
-        <canvas ref={canvasRef} className="w-full h-full pointer-events-none grayscale-[0.2] contrast-[1.1]" style={{ width: '100vw', height: '100dvh', display: 'block' }} />
+        <canvas ref={canvasRef} className="w-full h-full pointer-events-none contrast-[1.1]" style={{ width: '100vw', height: '100dvh', display: 'block' }} />
       </div>
     </div>
   );

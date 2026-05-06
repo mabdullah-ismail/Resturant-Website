@@ -98,7 +98,7 @@ export default function Home() {
             
             <div className="relative w-full max-w-[320px] md:max-w-[500px] z-10">
               <div className="w-full aspect-[4/5] bg-brand-charcoal border-[8px] md:border-[16px] border-[#111] overflow-hidden relative">
-                 <img src="/guilty.png" className="w-full h-full object-cover grayscale contrast-125" alt="Not Guilty Hero" />
+                 <img src="/guilty.png" className="w-full h-full object-cover" alt="Not Guilty Hero" />
               </div>
               <div className="absolute -left-8 md:-left-12 top-0 h-full flex flex-col justify-between py-6 md:py-8 text-sm md:text-lg font-black text-[#111] font-mono">
                 <span>7'0"</span><span>6'0"</span><span>5'0"</span><span>4'0"</span>
@@ -109,7 +109,7 @@ export default function Home() {
             <div className="bg-[#111] text-[#F5F5F0] px-6 md:px-8 py-2 md:py-3 text-2xl md:text-4xl font-black shadow-[8px_8px_0px_0px_#E31837] border-2 border-white font-mono uppercase tracking-widest">
               VERDICT
             </div>
-            <h2 className="text-6xl md:text-[11rem] font-black tracking-tighter text-[#111] leading-[0.85] md:leading-[0.8] text-center">
+            <h2 className="text-6xl md:text-[8rem] xl:text-[9rem] font-black tracking-tighter text-[#111] leading-[0.85] md:leading-[0.8] text-center" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
               NOT<br/>GUILTY
             </h2>
             <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-t-4 border-b-4 border-brand-red py-6 font-mono uppercase">
