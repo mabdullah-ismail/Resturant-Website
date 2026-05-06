@@ -101,8 +101,8 @@ export default function MenuReceipt() {
       {/* MASSIVE Sticky Dispenser Slot - Stays at top! */}
       <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-[#0A0A0A] z-[100] border-b-[8px] border-brand-red flex flex-col justify-center px-4 md:px-12 shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
         <div className="flex justify-between items-end w-full mb-2 font-mono text-brand-red text-xs md:text-sm font-black tracking-widest uppercase">
-          <span>[ SYS_ACTIVE ]</span>
-          <span>&lt; DISPENSER / T-04 &gt;</span>
+          <span>ORDER UP</span>
+          <span>FRESH BATCH</span>
         </div>
         <div className="w-[100%] max-w-7xl h-4 md:h-8 bg-black border-2 border-brand-charcoal relative overflow-hidden flex items-center justify-center mx-auto">
            {/* Flashing print laser */}
@@ -132,21 +132,18 @@ export default function MenuReceipt() {
           {/* Receipt Header - Industrial Brutalist */}
           <div className="pt-24 md:pt-48 pb-8 md:pb-12 text-center border-b-[4px] border-solid border-[#111] px-4 md:px-12 pointer-events-none relative">
              <div className="absolute top-4 left-4 font-mono text-[10px] md:text-sm font-black text-[#111] tracking-widest">
-               /// REV 2.6
-             </div>
-             <div className="absolute top-4 right-4 font-mono text-[10px] md:text-sm font-black text-[#111] tracking-widest">
-               [ AUTH_REQ ]
+               EST. 2024
              </div>
              <h2 className="text-5xl md:text-[8rem] font-black uppercase tracking-tighter text-[#111] leading-[0.85] mt-8" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                 BELLY BRO'S
              </h2>
              <p className="font-mono text-sm md:text-2xl font-black mt-6 md:mt-8 uppercase tracking-widest bg-[#111] text-[#F5F5F0] inline-block px-4 md:px-6 py-2 border-2 border-[#111]">
-                [ NO DIET, JUST BITE ]
+                NO DIET, JUST BITE
              </p>
              <div className="mt-12 md:mt-16 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 font-mono text-xs md:text-lg font-bold text-[#111] uppercase tracking-widest border-t-2 border-b-2 border-[#111] py-2">
-                <span>&lt; TICKET: #001 &gt;</span>
-                <span className="hidden md:inline">SYSTEM: INTERACTIVE</span>
-                <span>TERMINAL: 04</span>
+                <span>ORDER: #001</span>
+                <span className="hidden md:inline">DINE IN / TAKEAWAY</span>
+                <span>REGISTER: 01</span>
              </div>
           </div>
 
@@ -161,7 +158,7 @@ export default function MenuReceipt() {
                   <h3 className="text-3xl md:text-6xl font-black text-brand-red tracking-tighter uppercase leading-none" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                      {category.category}
                   </h3>
-                  <span className="font-mono text-xs md:text-sm font-black text-[#111] tracking-widest">[{idx + 1}.0]</span>
+                  <span className="font-mono text-xs md:text-sm font-black text-[#111] tracking-widest">0{idx + 1}</span>
                 </div>
                 
                 <div className="space-y-0">
@@ -174,7 +171,7 @@ export default function MenuReceipt() {
                     >
                       <div className="flex-1 pr-4 md:pr-8">
                         <h4 className="font-mono text-lg md:text-2xl font-black uppercase tracking-tight group-hover:text-brand-red leading-tight">
-                          &gt; {item.name}
+                          {item.name}
                         </h4>
                         {item.desc && (
                           <p className="font-mono text-[10px] md:text-sm font-bold text-[#555] group-hover:text-[#AAA] mt-1 md:mt-2 uppercase max-w-full md:max-w-[90%] leading-snug">
@@ -195,7 +192,7 @@ export default function MenuReceipt() {
           {/* Receipt Bottom */}
           <div className="pt-16 pb-24 text-center border-t-[8px] border-solid border-[#111] px-6 mt-16 bg-[#111] text-[#F5F5F0]">
              <p className="font-mono text-2xl md:text-4xl font-black uppercase tracking-widest text-brand-red">
-                &lt; TRANSACTION COMPLETE &gt;
+                YOUR ORDER IS READY
              </p>
              <p className="text-5xl md:text-7xl font-black uppercase tracking-widest mt-8" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                 THANK YOU.

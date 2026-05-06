@@ -227,7 +227,7 @@ export default function ChaecholScrollSequence() {
                 />
               </div>
               <div className="mt-4 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest font-black text-white">
-                <span>[ SYSTEM_INIT ]</span>
+                <span>LOADING...</span>
                 <span>{progress}%</span>
               </div>
             </div>
