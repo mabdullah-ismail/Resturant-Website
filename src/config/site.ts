@@ -3,25 +3,25 @@ export type MenuCategory = { category: string; items: MenuItem[] };
 
 export const siteConfig = {
   brand: {
-    name: "BELLY BRO'S",
-    shortName: "B.B",
-    motto: "NO DIET, JUST BITE",
+    name: "THE GRILL HOUSE",
+    shortName: "T.G.H",
+    motto: "REAL FLAVOR, NO COMPROMISE",
     established: "2024",
   },
   hero: {
-    title: "THE MOMENT",
-    titleAccent: "TRUTH",
-    boldText: "BUILT FOR THE BOLD.",
-    revealText: "UNWRAPPED",
-    revealSubtext: "PERFECTION",
+    title: "THE ULTIMATE",
+    titleAccent: "EXPERIENCE",
+    boldText: "TASTE THE FIRE.",
+    revealText: "UNLEASHED",
+    revealSubtext: "FLAVOR",
   },
   verdict: {
-    heading: "NOT GUILTY",
-    subheading: "Flavor so intense, it should be a felony.",
+    heading: "BEYOND FOOD",
+    subheading: "A culinary journey in every single bite.",
   },
   links: {
-    maps: "https://www.google.com/maps/place/belly+bros/data=!4m2!3m1!1s0x3919036cc83bebed:0xcd8774190ddb6f18?sa=X&ved=1t:242&ictx=111",
-    order: "https://www.foodpanda.pk/restaurant/jqef/bellybros?utm_campaign=google_reserve_place_order_action_CH-SEO_",
+    maps: "https://maps.google.com",
+    order: "https://your-ordering-platform.com",
     instagram: "#",
     tiktok: "#",
     facebook: "#",
@@ -30,86 +30,48 @@ export const siteConfig = {
     {
       category: "STARTERS",
       items: [
-        { name: "Chicken Tenders 3 Pcs", price: "Rs. 649" },
-        { name: "Chicken Tenders 6 Pcs", price: "Rs. 1149" },
-        { name: "Nuggets 6 Pcs", price: "Rs. 349" },
-        { name: "Bihari Roll", price: "Rs. 649" },
-        { name: "Bihari Roll Platter", price: "Rs. 1199" },
-        { name: "Oven Baked Wings (6)", price: "Rs. 549" },
-        { name: "Oven Baked Wings (12)", price: "Rs. 1099" },
+        { name: "Signature Wings (6)", price: "$9.99" },
+        { name: "Crispy Tenders (3)", price: "$8.49" },
+        { name: "Mozzarella Sticks", price: "$7.99" },
+        { name: "Garlic Herb Bread", price: "$5.49" },
       ]
     },
     {
-      category: "FRIES",
+      category: "MAINS - BURGERS",
       items: [
-        { name: "Loaded Fries", price: "Rs. 699" },
-        { name: "Charcoal Shawarma Fries", price: "Rs. 899" },
-        { name: "Cheesy Loaded Fries", price: "Rs. 849" },
-        { name: "Plain Fries", price: "Rs. 349" },
-        { name: "Masala Fries", price: "Rs. 399" },
+        { name: "The Classic Grill", desc: "Prime beef, secret sauce, artisanal bun", price: "$14.99" },
+        { name: "Smoky BBQ Burger", desc: "Smoked bacon, onion rings, BBQ glaze", price: "$15.99" },
+        { name: "Firehouse Spicy", desc: "Jalapeños, pepper jack, spicy aioli", price: "$14.49" },
       ]
     },
     {
-      category: "PIZZAS - CLASSIC",
+      category: "SIDES",
       items: [
-        { name: "Creamy Tikka", price: "S:599 | M:1299 | L:2199" },
-        { name: "Cheese Lover", price: "S:599 | M:1299 | L:2199" },
-        { name: "Lasagna Pizza", price: "S:599 | M:1299 | L:2199" },
-        { name: "Chicken Fajita", price: "S:599 | M:1299 | L:2199" },
-        { name: "BBQ Pizza", price: "S:599 | M:1299 | L:2199" },
+        { name: "Hand-Cut Fries", price: "$4.99" },
+        { name: "Truffle Parm Fries", price: "$7.99" },
+        { name: "Garden Salad", price: "$6.49" },
       ]
     },
     {
-      category: "PIZZAS - PREMIUM",
+      category: "PIZZAS",
       items: [
-        { name: "Kebab Stuffer", price: "S:749 | M:1599 | L:2499" },
-        { name: "Crown Crust", price: "S:749 | M:1599 | L:2499" },
-        { name: "Ranch Style Pizza", price: "S:749 | M:1599 | L:2499" },
-        { name: "Chicken Supreme", price: "S:749 | M:1599 | L:2499" },
-        { name: "Beef Pepperoni", price: "S:749 | M:1599 | L:2499" },
-        { name: "Achari Pizza", price: "S:749 | M:1599 | L:2499" },
-        { name: "Malai Boti", price: "S:749 | M:1599 | L:2499" },
+        { name: "The Signature Red", price: "$18.99" },
+        { name: "Pepperoni Feast", price: "$19.99" },
+        { name: "Garden Fresh", price: "$17.99" },
       ]
     },
     {
-      category: "SHAWARMA",
+      category: "DESSERTS",
       items: [
-        { name: "Charcoal Iraqi Shawarma Chicken", desc: "Saaj Bread With Garlic Sauce, Pickle and Fries", price: "Rs. 699" },
-        { name: "Charcoal Iraqi Shawarma Beef", desc: "Saaj Bread With Tahina, Pickle & Vegi Fries", price: "Rs. 1199" },
-      ]
-    },
-    {
-      category: "BROAST",
-      items: [
-        { name: "Quarter Broast", desc: "2 Pcs Chicken, Fries, Bread, Garlic Sauce", price: "Rs. 649" },
-        { name: "Half Broast", desc: "4 Pcs Chicken, Fries, 2 Bread, 2 Garlic Sauce", price: "Rs. 1249" },
-        { name: "Full Broast", desc: "8 Pcs Chicken, Fries, 3 Bread, 3 Garlic Sauce", price: "Rs. 2399" },
-      ]
-    },
-    {
-      category: "PLATTERS",
-      items: [
-        { name: "Shawarma Arabi Chicken", price: "Rs. 949" },
-        { name: "Shawarma Arabi Beef", price: "Rs. 1499" },
-        { name: "Sahan Shawarma Chicken", price: "Rs. 1049" },
-        { name: "Sahan Shawarma Beef", price: "Rs. 1549" },
-        { name: "Belly Bros Special Platter", price: "Rs. 1999" },
+        { name: "Molten Lava Cake", price: "$8.99" },
+        { name: "NY Cheesecake", price: "$7.49" },
       ]
     }
   ],
   footer: {
-    copyright: "© 2024 BELLY BRO'S",
-    subtext: "NO DIET, JUST BITE",
+    copyright: "© 2024 THE GRILL HOUSE",
+    subtext: "PREMIUM NEXT.JS STARTER",
   }
 };
-
-export const typedSiteConfig: {
-  brand: any;
-  hero: any;
-  verdict: any;
-  links: any;
-  menu: MenuCategory[];
-  footer: any;
-} = siteConfig;
 
 export type SiteConfig = typeof siteConfig;
