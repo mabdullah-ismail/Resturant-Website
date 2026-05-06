@@ -217,17 +217,17 @@ export default function ChaecholScrollSequence() {
               BELLY<br/>BRO'S
             </motion.div>
             
-            <div className="mt-12 w-64 md:w-80 px-4">
-              <div className="h-2 md:h-4 w-full bg-black/20 relative overflow-hidden rounded-full border-2 border-white/20">
+            <div className="mt-12 w-64 md:w-80 px-4 font-mono">
+              <div className="h-2 md:h-4 w-full bg-[#111] relative overflow-hidden border-2 border-white">
                 <motion.div 
-                  className="absolute h-full bg-white left-0"
+                  className="absolute h-full bg-brand-red left-0"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              <div className="mt-4 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-[0.2em] font-black text-white">
-                <span>FIRING UP...</span>
+              <div className="mt-4 flex justify-between items-center text-[10px] md:text-xs uppercase tracking-widest font-black text-white">
+                <span>[ SYSTEM_INIT ]</span>
                 <span>{progress}%</span>
               </div>
             </div>
@@ -236,8 +236,10 @@ export default function ChaecholScrollSequence() {
       </AnimatePresence>
       
       <div className="h-[100dvh] w-full flex items-center justify-center">
-        <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.3)_100%)]" />
-        <canvas ref={canvasRef} className="w-full h-full pointer-events-none" style={{ width: '100vw', height: '100dvh', display: 'block' }} />
+        <div className="absolute inset-0 z-10 pointer-events-none bg-[radial-gradient(circle_at_center,transparent_0%,rgba(0,0,0,0.5)_100%)]" />
+        {/* CRT Scanline Overlay */}
+        <div className="absolute inset-0 z-20 pointer-events-none opacity-[0.15]" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, black 2px, black 4px)' }} />
+        <canvas ref={canvasRef} className="w-full h-full pointer-events-none grayscale-[0.2] contrast-[1.1]" style={{ width: '100vw', height: '100dvh', display: 'block' }} />
       </div>
     </div>
   );

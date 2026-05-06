@@ -99,20 +99,21 @@ export default function MenuReceipt() {
     <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[300dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
       
       {/* MASSIVE Sticky Dispenser Slot - Stays at top! */}
-      <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black to-zinc-900 z-[100] border-b-[12px] border-[#111] flex items-center justify-center shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
-        <div className="w-[95%] md:w-[90%] max-w-7xl h-4 md:h-8 bg-black rounded-full shadow-inner flex items-center justify-center overflow-hidden border border-white/10">
+      <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-[#0A0A0A] z-[100] border-b-[8px] border-brand-red flex flex-col justify-center px-4 md:px-12 shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
+        <div className="flex justify-between items-end w-full mb-2 font-mono text-brand-red text-xs md:text-sm font-black tracking-widest uppercase">
+          <span>[ SYS_ACTIVE ]</span>
+          <span>&lt; DISPENSER / T-04 &gt;</span>
+        </div>
+        <div className="w-[100%] max-w-7xl h-4 md:h-8 bg-black border-2 border-brand-charcoal relative overflow-hidden flex items-center justify-center mx-auto">
            {/* Flashing print laser */}
            <motion.div 
              animate={{ x: ['-100%', '100%'] }}
              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-             className="w-1/2 h-full bg-brand-red blur-md opacity-50" 
+             className="w-1/2 h-full bg-brand-red blur-sm opacity-80" 
            />
+           {/* CRT Scanline effect in slot */}
+           <div className="absolute inset-0 pointer-events-none opacity-20" style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 1px, rgba(255,255,255,0.1) 1px, rgba(255,255,255,0.1) 2px)' }} />
         </div>
-        {/* Metal rivets */}
-        <div className="absolute top-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
-        <div className="absolute top-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
-        <div className="absolute bottom-4 left-6 md:left-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
-        <div className="absolute bottom-4 right-6 md:right-12 w-3 h-3 md:w-5 md:h-5 rounded-full bg-zinc-800 shadow-[inset_0_-2px_4px_rgba(0,0,0,0.8)] border border-zinc-600 z-10" />
       </div>
 
       {/* The 3D Receipt Paper */}
@@ -128,48 +129,60 @@ export default function MenuReceipt() {
           {/* Receipt Top Jagged Edge */}
           <div className="absolute -top-6 left-0 right-0 h-6 bg-[#F5F5F0]" style={{ clipPath: 'polygon(0% 100%, 2% 0%, 4% 100%, 6% 0%, 8% 100%, 10% 0%, 12% 100%, 14% 0%, 16% 100%, 18% 0%, 20% 100%, 22% 0%, 24% 100%, 26% 0%, 28% 100%, 30% 0%, 32% 100%, 34% 0%, 36% 100%, 38% 0%, 40% 100%, 42% 0%, 44% 100%, 46% 0%, 48% 100%, 50% 0%, 52% 100%, 54% 0%, 56% 100%, 58% 0%, 60% 100%, 62% 0%, 64% 100%, 66% 0%, 68% 100%, 70% 0%, 72% 100%, 74% 0%, 76% 100%, 78% 0%, 80% 100%, 82% 0%, 84% 100%, 86% 0%, 88% 100%, 90% 0%, 92% 100%, 94% 0%, 96% 100%, 98% 0%, 100% 100%)' }} />
 
-          {/* Receipt Header */}
-          <div className="pt-32 md:pt-64 pb-8 md:pb-12 text-center border-b-[4px] border-dashed border-gray-400 px-4 md:px-12 pointer-events-none">
-             <h2 className="text-5xl md:text-9xl font-black uppercase tracking-tighter text-black/90 leading-none" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
+          {/* Receipt Header - Industrial Brutalist */}
+          <div className="pt-24 md:pt-48 pb-8 md:pb-12 text-center border-b-[4px] border-solid border-[#111] px-4 md:px-12 pointer-events-none relative">
+             <div className="absolute top-4 left-4 font-mono text-[10px] md:text-sm font-black text-[#111] tracking-widest">
+               /// REV 2.6
+             </div>
+             <div className="absolute top-4 right-4 font-mono text-[10px] md:text-sm font-black text-[#111] tracking-widest">
+               [ AUTH_REQ ]
+             </div>
+             <h2 className="text-5xl md:text-[8rem] font-black uppercase tracking-tighter text-[#111] leading-[0.85] mt-8" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                 BELLY BRO'S
              </h2>
-             <p className="text-sm md:text-4xl font-black mt-4 md:mt-6 uppercase tracking-widest bg-black text-white inline-block px-4 md:px-6 py-2">
-                NO DIET, JUST BITE.
+             <p className="font-mono text-sm md:text-2xl font-black mt-6 md:mt-8 uppercase tracking-widest bg-[#111] text-[#F5F5F0] inline-block px-4 md:px-6 py-2 border-2 border-[#111]">
+                [ NO DIET, JUST BITE ]
              </p>
-             <div className="mt-8 md:mt-12 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 text-[10px] md:text-xl font-bold text-gray-500 uppercase tracking-widest">
-                <span>ORDER TICKET: #001</span>
-                <span className="hidden md:inline">INTERACTIVE MENU</span>
+             <div className="mt-12 md:mt-16 flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0 font-mono text-xs md:text-lg font-bold text-[#111] uppercase tracking-widest border-t-2 border-b-2 border-[#111] py-2">
+                <span>&lt; TICKET: #001 &gt;</span>
+                <span className="hidden md:inline">SYSTEM: INTERACTIVE</span>
                 <span>TERMINAL: 04</span>
              </div>
           </div>
 
-          {/* Menu Categories - Extremely Spacious and Wide */}
-          <div className="p-4 md:p-24 space-y-16 md:space-y-32 pointer-events-auto">
+          {/* Menu Categories - Industrial Grid */}
+          <div className="p-4 md:p-16 space-y-12 md:space-y-24 pointer-events-auto">
             {menuData.map((category, idx) => (
-              <div key={idx} className="w-full">
-                <h3 className="text-4xl md:text-7xl font-black text-brand-red mb-6 md:mb-12 tracking-tighter uppercase leading-none" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
-                   {category.category}
-                </h3>
+              <div key={idx} className="w-full border-4 border-[#111] bg-[#EAE8E3] p-4 md:p-8 relative">
+                <div className="absolute -top-4 -left-4 w-8 h-8 border-t-4 border-l-4 border-brand-red"></div>
+                <div className="absolute -bottom-4 -right-4 w-8 h-8 border-b-4 border-r-4 border-brand-red"></div>
                 
-                <div className="space-y-6 md:space-y-12">
+                <div className="flex justify-between items-end border-b-4 border-[#111] pb-4 mb-6 md:mb-10">
+                  <h3 className="text-3xl md:text-6xl font-black text-brand-red tracking-tighter uppercase leading-none" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
+                     {category.category}
+                  </h3>
+                  <span className="font-mono text-xs md:text-sm font-black text-[#111] tracking-widest">[{idx + 1}.0]</span>
+                </div>
+                
+                <div className="space-y-0">
                   {category.items.map((item, itemIdx) => (
                     <div 
                       key={itemIdx} 
-                      className="group flex flex-col md:flex-row md:items-end justify-between border-b-2 border-dotted border-gray-400 pb-2 md:pb-4 cursor-crosshair"
+                      className="group flex flex-col md:flex-row md:items-end justify-between border-b-2 border-solid border-[#111] py-4 cursor-crosshair hover:bg-[#111] hover:text-[#F5F5F0] transition-colors duration-0 px-2"
                       onMouseEnter={() => setHoveredItem(item.name)}
                       onMouseLeave={() => setHoveredItem(null)}
                     >
                       <div className="flex-1 pr-4 md:pr-8">
-                        <h4 className="text-lg md:text-4xl font-black uppercase tracking-tight group-hover:text-brand-red transition-colors duration-100 leading-tight">
-                          {item.name}
+                        <h4 className="font-mono text-lg md:text-2xl font-black uppercase tracking-tight group-hover:text-brand-red leading-tight">
+                          &gt; {item.name}
                         </h4>
                         {item.desc && (
-                          <p className="text-[10px] md:text-xl font-bold text-gray-500 mt-1 md:mt-2 uppercase max-w-full md:max-w-[90%] leading-snug">
+                          <p className="font-mono text-[10px] md:text-sm font-bold text-[#555] group-hover:text-[#AAA] mt-1 md:mt-2 uppercase max-w-full md:max-w-[90%] leading-snug">
                             {item.desc}
                           </p>
                         )}
                       </div>
-                      <div className="mt-1 md:mt-0 text-xl md:text-4xl font-black whitespace-nowrap text-brand-charcoal">
+                      <div className="mt-2 md:mt-0 font-mono text-xl md:text-3xl font-black whitespace-nowrap text-brand-red">
                         {item.price}
                       </div>
                     </div>
@@ -180,14 +193,20 @@ export default function MenuReceipt() {
           </div>
 
           {/* Receipt Bottom */}
-          <div className="pt-16 pb-24 text-center border-t-[4px] border-dashed border-gray-400 px-6 mt-16">
-             <p className="text-4xl md:text-6xl font-black uppercase tracking-widest text-black/90" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
+          <div className="pt-16 pb-24 text-center border-t-[8px] border-solid border-[#111] px-6 mt-16 bg-[#111] text-[#F5F5F0]">
+             <p className="font-mono text-2xl md:text-4xl font-black uppercase tracking-widest text-brand-red">
+                &lt; TRANSACTION COMPLETE &gt;
+             </p>
+             <p className="text-5xl md:text-7xl font-black uppercase tracking-widest mt-8" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
                 THANK YOU.
              </p>
              <div className="mt-12 flex justify-center">
-               {/* Massive Fake Barcode */}
-               <div className="h-24 md:h-32 w-full max-w-2xl opacity-80" style={{ backgroundImage: 'repeating-linear-gradient(to right, black 0, black 4px, transparent 4px, transparent 10px, black 10px, black 12px, transparent 12px, transparent 18px, black 18px, black 26px, transparent 26px, transparent 32px)', backgroundSize: '100% 100%' }} />
+               {/* Massive Brutalist Barcode */}
+               <div className="h-24 md:h-32 w-full max-w-2xl bg-white" style={{ backgroundImage: 'repeating-linear-gradient(to right, black 0, black 4px, white 4px, white 10px, black 10px, black 12px, white 12px, white 18px, black 18px, black 26px, white 26px, white 32px)', backgroundSize: '100% 100%' }} />
              </div>
+             <p className="font-mono text-[10px] md:text-sm font-black text-[#555] tracking-widest mt-4">
+                ||||||||||||||||||||||||||||||||||||||
+             </p>
           </div>
           
           {/* Receipt Bottom Jagged Edge */}

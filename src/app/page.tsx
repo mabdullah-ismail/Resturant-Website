@@ -39,9 +39,13 @@ export default function Home() {
         <ChaecholScrollSequence />
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
-           <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4" style={{ opacity: 0 }}>
+           <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative" style={{ opacity: 0 }}>
+              <div className="absolute top-0 left-0 right-0 flex justify-between px-12 md:px-24 font-mono text-xs text-white/50 tracking-widest uppercase">
+                <span>SEQ_001</span>
+                <span>STATUS: OPERATIONAL</span>
+              </div>
               <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
-                THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
+                [ THE MOMENT ]<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
            </div>
 
@@ -54,10 +58,16 @@ export default function Home() {
            </div>
 
            <div className="absolute inset-0 flex items-center justify-center px-4 pointer-events-none">
-              <div className="intro-text-2 opacity-0 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 shadow-[10px_10px_0px_0px_rgba(0,0,0,0.5)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,0.5)]" style={{ opacity: 0 }}>
+              <div className="intro-text-2 opacity-0 bg-brand-red px-6 md:px-10 py-3 md:py-4 rotate-2 border-4 border-white shadow-[10px_10px_0px_0px_rgba(255,255,255,1)] md:shadow-[20px_20px_0px_0px_rgba(255,255,255,1)] relative" style={{ opacity: 0 }}>
+                {/* Crosshairs */}
+                <div className="absolute -top-3 -left-3 w-6 h-6 border-t-4 border-l-4 border-white"></div>
+                <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-4 border-r-4 border-white"></div>
                 <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
                   BUILT FOR THE BOLD.
                 </h2>
+                <div className="absolute top-1 right-2 text-[8px] font-mono text-white/50 tracking-widest">
+                  [ DATA_SEC_01 ]
+                </div>
               </div>
            </div>
 
@@ -84,23 +94,31 @@ export default function Home() {
       <section id="not-guilty-section" className="relative bg-brand-orange min-h-[100dvh] flex items-center justify-center py-24 md:py-40 px-6 md:px-12 border-t-8 border-brand-charcoal">
         <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg, black 0px, black 2px, transparent 2px, transparent 60px)' }} />
         
-        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center relative z-10">
-          <div className="flex flex-col items-center">
-            <div className="relative w-full max-w-[320px] md:max-w-[500px]">
-              <div className="w-full aspect-[4/5] bg-brand-charcoal border-[8px] md:border-[16px] border-white shadow-[15px_15px_0px_0px_rgba(0,0,0,0.3)] md:shadow-[30px_30px_0px_0px_rgba(0,0,0,0.3)] overflow-hidden">
-                 <img src="/guilty.png" className="w-full h-full object-cover" alt="Not Guilty Hero" />
+        <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-32 items-center relative z-10 border-4 border-[#111] bg-brand-orange p-8 md:p-12 shadow-[20px_20px_0px_0px_#111]">
+          <div className="flex flex-col items-center relative">
+            {/* Tactical Grid Overlay */}
+            <div className="absolute inset-0 z-0 pointer-events-none border border-[#111]/20" style={{ backgroundImage: 'linear-gradient(#111 1px, transparent 1px), linear-gradient(90deg, #111 1px, transparent 1px)', backgroundSize: '40px 40px', opacity: 0.1 }} />
+            
+            <div className="relative w-full max-w-[320px] md:max-w-[500px] z-10">
+              <div className="w-full aspect-[4/5] bg-brand-charcoal border-[8px] md:border-[16px] border-[#111] overflow-hidden relative">
+                 <div className="absolute top-0 right-0 bg-brand-red text-white font-mono text-xs font-black px-2 py-1 z-20 border-b-4 border-l-4 border-[#111]">
+                   &lt; CAM_04 &gt;
+                 </div>
+                 <img src="/guilty.png" className="w-full h-full object-cover grayscale contrast-125" alt="Not Guilty Hero" />
               </div>
-              <div className="absolute -left-8 md:-left-12 top-0 h-full flex flex-col justify-between py-6 md:py-8 text-sm md:text-lg font-black text-white">
+              <div className="absolute -left-8 md:-left-12 top-0 h-full flex flex-col justify-between py-6 md:py-8 text-sm md:text-lg font-black text-[#111] font-mono">
                 <span>7'0"</span><span>6'0"</span><span>5'0"</span><span>4'0"</span>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-8 md:gap-12 text-center md:text-left">
-            <div className="bg-brand-charcoal text-white px-6 md:px-8 py-2 md:py-3 text-2xl md:text-4xl font-black rotate-[-2deg] shadow-xl">VERDICT:</div>
-            <h2 className="text-6xl md:text-[12rem] font-black tracking-tighter text-white leading-[0.85] md:leading-[0.8]">
+          <div className="flex flex-col items-center md:items-start gap-8 md:gap-12 text-center md:text-left z-10">
+            <div className="bg-[#111] text-[#F5F5F0] px-6 md:px-8 py-2 md:py-3 text-2xl md:text-4xl font-black shadow-[8px_8px_0px_0px_#E31837] border-2 border-white font-mono uppercase tracking-widest">
+              [ VERDICT ]
+            </div>
+            <h2 className="text-6xl md:text-[11rem] font-black tracking-tighter text-[#111] leading-[0.85] md:leading-[0.8]">
               NOT<br/>GUILTY
             </h2>
-            <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-l-0 md:border-l-8 border-brand-red pl-0 md:pl-8 italic">
+            <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-l-0 md:border-l-8 border-brand-red pl-0 md:pl-8 font-mono uppercase">
               "Flavor so intense, it should be a felony."
             </p>
           </div>
@@ -128,17 +146,17 @@ export default function Home() {
                href="https://www.google.com/maps/place/belly+bros/data=!4m2!3m1!1s0x3919036cc83bebed:0xcd8774190ddb6f18?sa=X&ved=1t:242&ictx=111"
                target="_blank"
                rel="noopener noreferrer"
-               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] md:shadow-[20px_20px_0px_0px_rgba(0,0,0,1)] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block"
+               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white border-4 border-[#111] shadow-[8px_8px_0px_0px_#111] md:shadow-[16px_16px_0px_0px_#111] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_#111] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block font-mono"
              >
-                FIND US
+                &gt; FIND US
              </a>
              <a 
                href="https://www.foodpanda.pk/restaurant/jqef/bellybros?utm_campaign=google_reserve_place_order_action_CH-SEO_"
                target="_blank"
                rel="noopener noreferrer"
-               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-charcoal px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white shadow-[6px_6px_0px_0px_white] md:shadow-[20px_20px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[2px_2px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block"
+               className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-[#111] px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white border-4 border-[#111] shadow-[8px_8px_0px_0px_white] md:shadow-[16px_16px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block font-mono"
              >
-                ORDER NOW
+                &gt; ORDER NOW
              </a>
           </div>
         </div>
