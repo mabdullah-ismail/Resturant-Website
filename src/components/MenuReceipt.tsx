@@ -3,13 +3,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 
-type MenuItem = { name: string; price: string; desc?: string };
-type MenuCategory = { category: string; items: MenuItem[] };
-
-import { siteConfig } from '@/config/site';
+import { siteConfig, type MenuCategory } from '@/config/site';
 
 export default function MenuReceipt() {
-  const menuData = siteConfig.menu;
+  const menuData = siteConfig.menu as MenuCategory[];
   const [hoveredItem, setHoveredItem] = useState<string | null>(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const sectionRef = useRef<HTMLElement>(null);

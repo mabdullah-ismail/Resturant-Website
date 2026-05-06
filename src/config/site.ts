@@ -1,3 +1,6 @@
+export type MenuItem = { name: string; price: string; desc?: string };
+export type MenuCategory = { category: string; items: MenuItem[] };
+
 export const siteConfig = {
   brand: {
     name: "BELLY BRO'S",
@@ -99,5 +102,14 @@ export const siteConfig = {
     subtext: "NO DIET, JUST BITE",
   }
 };
+
+export const typedSiteConfig: {
+  brand: any;
+  hero: any;
+  verdict: any;
+  links: any;
+  menu: MenuCategory[];
+  footer: any;
+} = siteConfig;
 
 export type SiteConfig = typeof siteConfig;
