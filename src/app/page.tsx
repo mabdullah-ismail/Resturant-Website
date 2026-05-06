@@ -42,10 +42,7 @@ export default function Home() {
 
         <div className="pointer-events-none fixed inset-0 z-20 flex items-center justify-center p-6 md:p-12">
            <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative" style={{ opacity: 0 }}>
-              <div className="absolute top-0 left-0 right-0 flex justify-between px-12 md:px-24 font-mono text-xs text-white/50 tracking-widest uppercase">
-                <span>OUR STORY</span>
-                <span>BELLY BROS</span>
-              </div>
+
               <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                 THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
               </h2>
