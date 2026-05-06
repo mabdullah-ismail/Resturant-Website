@@ -111,14 +111,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-start gap-8 md:gap-12 text-center md:text-left z-10">
+          <div className="flex flex-col items-center justify-center gap-8 md:gap-12 text-center z-10 w-full h-full">
             <div className="bg-[#111] text-[#F5F5F0] px-6 md:px-8 py-2 md:py-3 text-2xl md:text-4xl font-black shadow-[8px_8px_0px_0px_#E31837] border-2 border-white font-mono uppercase tracking-widest">
               [ VERDICT ]
             </div>
-            <h2 className="text-6xl md:text-[11rem] font-black tracking-tighter text-[#111] leading-[0.85] md:leading-[0.8]">
+            <h2 className="text-6xl md:text-[11rem] font-black tracking-tighter text-[#111] leading-[0.85] md:leading-[0.8] text-center">
               NOT<br/>GUILTY
             </h2>
-            <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-l-0 md:border-l-8 border-brand-red pl-0 md:pl-8 font-mono uppercase">
+            <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-t-4 border-b-4 border-brand-red py-6 font-mono uppercase">
               "Flavor so intense, it should be a felony."
             </p>
           </div>
