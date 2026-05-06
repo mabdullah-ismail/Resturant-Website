@@ -14,23 +14,27 @@ export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // 1. Force manual scroll restoration so the browser doesn't try to "help"
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
-    }, 100);
-    // FIX FOR ANDROID SCROLL LOCK:
-    // Prevents GSAP from completely breaking when the Android URL bar hides/shows
-    ScrollTrigger.config({ ignoreMobileResize: true });
-    
-    // Refresh ScrollTrigger after a short delay to ensure all layouts are calculated correctly
-    const timer = setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 1000);
 
-    return () => clearTimeout(timer);
+    // 2. Kill any existing triggers and scroll to top immediately
+    const resetScroll = () => {
+      window.scrollTo(0, 0);
+      ScrollTrigger.refresh();
+    };
+
+    resetScroll();
+
+    // 3. Extra safety for mobile/slow loaders
+    const timer = setTimeout(resetScroll, 250);
+    const longTimer = setTimeout(resetScroll, 1000);
+
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(longTimer);
+    };
   }, []);
 
   return (
