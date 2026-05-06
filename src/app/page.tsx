@@ -82,7 +82,7 @@ export default function Home() {
         {/* Brand Elements */}
         <div className="fixed top-6 left-0 right-0 md:left-12 md:right-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 z-50">
           <div className="bg-brand-red p-1.5 md:p-2 font-black text-xl md:text-2xl rotate-3 shadow-lg">B.B</div>
-          <span className="text-base md:text-xl font-black tracking-tighter text-white">BELLY BRO'S</span>
+          <span className="text-base md:text-xl font-black tracking-tighter text-white">BELLY BRO&apos;S</span>
         </div>
       </section>
 
@@ -99,7 +99,7 @@ export default function Home() {
               <div className="w-full aspect-[4/5] bg-brand-charcoal border-[8px] md:border-[16px] border-[#111] overflow-hidden relative">
                  <img src="/guilty.png" className="w-full h-full object-cover" alt="Not Guilty Hero" />
                  <div className="absolute left-2 md:left-4 top-0 h-full flex flex-col justify-between py-6 md:py-8 text-sm md:text-xl font-black text-[#111] font-mono z-10 drop-shadow-[2px_2px_0px_white]">
-                   <span>7'0"</span><span>6'0"</span><span>5'0"</span><span>4'0"</span>
+                   <span>7&apos;0&quot;</span><span>6&apos;0&quot;</span><span>5&apos;0&quot;</span><span>4&apos;0&quot;</span>
                  </div>
               </div>
             </div>
@@ -112,7 +112,7 @@ export default function Home() {
               NOT<br/>GUILTY
             </h2>
             <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-t-4 border-b-4 border-brand-red py-6 font-mono uppercase">
-              "Flavor so intense, it should be a felony."
+              &quot;Flavor so intense, it should be a felony.&quot;
             </p>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       <footer className="relative z-30 bg-brand-charcoal py-6 md:py-8 text-center">
-          <p className="text-[8px] md:text-[10px] font-black text-white/20 tracking-widest uppercase px-4">© 2024 BELLY BRO'S • NO DIET, JUST BITE</p>
+          <p className="text-[8px] md:text-[10px] font-black text-white/20 tracking-widest uppercase px-4">© 2024 BELLY BRO&apos;S • NO DIET, JUST BITE</p>
       </footer>
     </main>
   );

@@ -214,7 +214,7 @@ export default function ChaecholScrollSequence() {
               className="text-6xl md:text-[10rem] font-black tracking-tighter text-white text-center leading-none"
               style={{ fontFamily: "'Bowlby One SC', cursive" }}
             >
-              BELLY<br/>BRO'S
+              BELLY<br/>BRO&apos;S
             </motion.div>
             
             <div className="mt-12 w-64 md:w-80 px-4 font-mono">

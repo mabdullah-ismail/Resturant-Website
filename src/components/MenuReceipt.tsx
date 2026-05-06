@@ -135,7 +135,7 @@ export default function MenuReceipt() {
                EST. 2024
              </div>
              <h2 className="text-5xl md:text-[8rem] font-black uppercase tracking-tighter text-[#111] leading-[0.85] mt-8" style={{ fontFamily: "'Bowlby One SC', cursive" }}>
-                BELLY BRO'S
+                BELLY BRO&apos;S
              </h2>
              <p className="font-mono text-sm md:text-2xl font-black mt-6 md:mt-8 uppercase tracking-widest bg-[#111] text-[#F5F5F0] inline-block px-4 md:px-6 py-2 border-2 border-[#111]">
                 NO DIET, JUST BITE
