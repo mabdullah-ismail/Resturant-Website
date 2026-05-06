@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ChaecholScrollSequence from '@/components/ChaecholScrollSequence';
 import SmoothScroll from '@/components/SmoothScroll';
 import MenuReceipt from '@/components/MenuReceipt';
+import { siteConfig } from '@/config/site';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +45,7 @@ export default function Home() {
            <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative" style={{ opacity: 0 }}>
 
               <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
-                THE MOMENT<br/>OF <span className="text-brand-red underline decoration-brand-orange">TRUTH</span>
+                {siteConfig.hero.title}<br/>OF <span className="text-brand-red underline decoration-brand-orange">{siteConfig.hero.titleAccent}</span>
               </h2>
            </div>
 
@@ -62,18 +63,18 @@ export default function Home() {
                 <div className="absolute -top-3 -left-3 w-6 h-6 border-t-4 border-l-4 border-white"></div>
                 <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-4 border-r-4 border-white"></div>
                 <h2 className="text-[7.5vw] md:text-8xl font-black text-white uppercase italic text-center whitespace-nowrap">
-                  BUILT FOR THE BOLD.
+                  {siteConfig.hero.boldText}
                 </h2>
               </div>
            </div>
 
            <div className="final-reveal-text opacity-0 absolute bottom-24 md:bottom-20 right-0 left-0 md:right-12 md:left-auto flex flex-col items-center md:items-end text-center md:text-right px-6" style={{ opacity: 0 }}>
               <h1 className="text-5xl md:text-[8rem] font-black tracking-tighter text-white leading-none drop-shadow-[0_0_15px_rgba(0,0,0,1)] md:drop-shadow-[0_0_30px_rgba(0,0,0,1)]" style={{ WebkitTextStroke: "2px var(--color-brand-orange)" }}>
-                UNWRAPPED
+                {siteConfig.hero.revealText}
               </h1>
               <div className="bg-brand-orange px-4 md:px-6 py-1 mt-2 -rotate-1 shadow-lg">
                 <h2 className="text-2xl md:text-5xl font-black text-white tracking-tighter">
-                  PERFECTION
+                  {siteConfig.hero.revealSubtext}
                 </h2>
               </div>
            </div>
@@ -81,8 +82,8 @@ export default function Home() {
 
         {/* Brand Elements */}
         <div className="fixed top-6 left-0 right-0 md:left-12 md:right-auto flex items-center justify-center md:justify-start gap-3 md:gap-4 z-50">
-          <div className="bg-brand-red p-1.5 md:p-2 font-black text-xl md:text-2xl rotate-3 shadow-lg">B.B</div>
-          <span className="text-base md:text-xl font-black tracking-tighter text-white">BELLY BRO&apos;S</span>
+          <div className="bg-brand-red p-1.5 md:p-2 font-black text-xl md:text-2xl rotate-3 shadow-lg">{siteConfig.brand.shortName}</div>
+          <span className="text-base md:text-xl font-black tracking-tighter text-white">{siteConfig.brand.name}</span>
         </div>
       </section>
 
@@ -112,7 +113,7 @@ export default function Home() {
               NOT<br/>GUILTY
             </h2>
             <p className="text-xl md:text-3xl font-bold text-brand-charcoal max-w-lg border-t-4 border-b-4 border-brand-red py-6 font-mono uppercase">
-              &quot;Flavor so intense, it should be a felony.&quot;
+              &quot;{siteConfig.verdict.subheading}&quot;
             </p>
           </div>
         </div>
@@ -136,7 +137,7 @@ export default function Home() {
           
           <div className="flex flex-col md:flex-row gap-4 md:gap-12 w-[85%] max-w-sm md:max-w-none md:w-full justify-center items-center mx-auto">
              <a 
-               href="https://www.google.com/maps/place/belly+bros/data=!4m2!3m1!1s0x3919036cc83bebed:0xcd8774190ddb6f18?sa=X&ved=1t:242&ictx=111"
+               href={siteConfig.links.maps}
                target="_blank"
                rel="noopener noreferrer"
                className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-brand-orange px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white border-4 border-[#111] shadow-[8px_8px_0px_0px_#111] md:shadow-[16px_16px_0px_0px_#111] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_#111] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block font-mono"
@@ -144,7 +145,7 @@ export default function Home() {
                 FIND US
              </a>
              <a 
-               href="https://www.foodpanda.pk/restaurant/jqef/bellybros?utm_campaign=google_reserve_place_order_action_CH-SEO_"
+               href={siteConfig.links.order}
                target="_blank"
                rel="noopener noreferrer"
                className="w-full md:flex-1 min-w-0 md:min-w-[300px] text-center rounded-none bg-[#111] px-6 md:px-12 py-3 md:py-10 text-lg md:text-3xl font-black text-white border-4 border-[#111] shadow-[8px_8px_0px_0px_white] md:shadow-[16px_16px_0px_0px_white] active:translate-x-1 active:translate-y-1 active:shadow-[4px_4px_0px_0px_white] hover:md:translate-x-2 hover:md:translate-y-2 hover:md:shadow-none transition-all uppercase tracking-widest block font-mono"
@@ -157,15 +158,15 @@ export default function Home() {
         {/* SOCIAL LINKS - CENTERED */}
         <div className="relative z-10 w-full pt-8 md:pt-12 border-t border-white/20 mt-12 md:mt-16">
           <div className="flex flex-wrap justify-center gap-6 md:gap-24 text-[10px] md:text-sm font-black text-white uppercase tracking-[0.2em] md:tracking-[0.4em]">
-             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Instagram</a>
-             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">TikTok</a>
-             <a href="#" className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Facebook</a>
+             <a href={siteConfig.links.instagram} className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Instagram</a>
+             <a href={siteConfig.links.tiktok} className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">TikTok</a>
+             <a href={siteConfig.links.facebook} className="hover:text-brand-charcoal transition-colors px-4 md:px-6 py-2 md:py-3 bg-white/10 hover:bg-white text-center">Facebook</a>
           </div>
         </div>
       </section>
 
       <footer className="relative z-30 bg-brand-charcoal py-6 md:py-8 text-center">
-          <p className="text-[8px] md:text-[10px] font-black text-white/20 tracking-widest uppercase px-4">© 2024 BELLY BRO&apos;S • NO DIET, JUST BITE</p>
+          <p className="text-[8px] md:text-[10px] font-black text-white/20 tracking-widest uppercase px-4">{siteConfig.footer.copyright} • {siteConfig.footer.subtext}</p>
       </footer>
     </main>
   );
