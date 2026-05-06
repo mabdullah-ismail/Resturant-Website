@@ -96,7 +96,7 @@ export default function MenuReceipt() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.95, 1, 0.95]);
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-brand-charcoal min-h-[300dvh] pb-32 flex flex-col items-center border-t-8 border-brand-red">
+    <section ref={sectionRef} className="relative w-full bg-brand-charcoal pb-32 flex flex-col items-center border-t-8 border-brand-red">
       
       {/* MASSIVE Sticky Dispenser Slot - Stays at top! */}
       <div className="sticky top-0 left-0 right-0 h-24 md:h-32 bg-[#0A0A0A] z-[100] border-b-[8px] border-brand-red flex flex-col justify-center px-4 md:px-12 shadow-[0_30px_60px_rgba(0,0,0,1)] w-full">
@@ -124,7 +124,7 @@ export default function MenuReceipt() {
             scale,
             transformOrigin: 'top center'
           }}
-          className="bg-[#F5F5F0] w-full min-h-[200vh] pb-48 text-black shadow-[0_50px_100px_rgba(0,0,0,1)] relative border-l-4 md:border-l-[12px] border-r-4 md:border-r-[12px] border-[#E8E8E0] font-mono pointer-events-none"
+          className="bg-[#F5F5F0] w-full pb-48 text-black shadow-[0_50px_100px_rgba(0,0,0,1)] relative border-l-4 md:border-l-[12px] border-r-4 md:border-r-[12px] border-[#E8E8E0] font-mono pointer-events-none"
         >
           {/* Receipt Top Jagged Edge */}
           <div className="absolute -top-6 left-0 right-0 h-6 bg-[#F5F5F0]" style={{ clipPath: 'polygon(0% 100%, 2% 0%, 4% 100%, 6% 0%, 8% 100%, 10% 0%, 12% 100%, 14% 0%, 16% 100%, 18% 0%, 20% 100%, 22% 0%, 24% 100%, 26% 0%, 28% 100%, 30% 0%, 32% 100%, 34% 0%, 36% 100%, 38% 0%, 40% 100%, 42% 0%, 44% 100%, 46% 0%, 48% 100%, 50% 0%, 52% 100%, 54% 0%, 56% 100%, 58% 0%, 60% 100%, 62% 0%, 64% 100%, 66% 0%, 68% 100%, 70% 0%, 72% 100%, 74% 0%, 76% 100%, 78% 0%, 80% 100%, 82% 0%, 84% 100%, 86% 0%, 88% 100%, 90% 0%, 92% 100%, 94% 0%, 96% 100%, 98% 0%, 100% 100%)' }} />
