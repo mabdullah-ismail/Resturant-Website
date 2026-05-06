@@ -152,7 +152,7 @@ export default function ChaecholScrollSequence() {
     tl.to('.intro-text-1', {
       scale: isMobile ? 0.6 : 0.4,
       x: isMobile ? '10vw' : '35vw',
-      y: isMobile ? '-5dvh' : '-10dvh', // Minimal movement to stay in safety zone
+      y: 0, // Lock it in the safe position
       opacity: 0.9,
       duration: 20
     }, 5);

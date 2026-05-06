@@ -47,7 +47,7 @@ export default function Home() {
         <ChaecholScrollSequence />
 
          <div className="pointer-events-none fixed inset-0 z-20 flex items-start justify-center p-6 md:p-12">
-            <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative mt-[22dvh] md:mt-[15dvh]" style={{ opacity: 0 }}>
+            <div className="intro-text-1 opacity-0 text-center w-full flex flex-col items-center justify-center px-4 relative mt-[40dvh] md:mt-[25dvh]" style={{ opacity: 0 }}>
                <h2 className="text-[12vw] md:text-9xl font-black text-white italic tracking-tighter uppercase drop-shadow-2xl leading-[0.9]">
                  {siteConfig.hero.title}<br/>OF <span className="text-brand-red underline decoration-brand-orange">{siteConfig.hero.titleAccent}</span>
                </h2>
