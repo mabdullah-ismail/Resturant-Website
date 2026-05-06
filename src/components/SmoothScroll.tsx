@@ -21,7 +21,6 @@ export default function SmoothScroll() {
       touchMultiplier: 2, // More responsive touch
       infinite: false,
       syncTouch: true, // Sync with touch for better mobile feel
-      touchInertiaMultiplier: 35,
     });
  
     // Sync Lenis with GSAP ScrollTrigger
