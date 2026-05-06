@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import { siteConfig } from "@/config/site";
+
 export const metadata: Metadata = {
-  title: "Belly Bros",
-  description: "A premium culinary experience by Belly Bros.",
+  title: `${siteConfig.brand.name} | Premium Next.js Starter`,
+  description: siteConfig.verdict.subheading,
 };
 
 export default function RootLayout({
